@@ -14,6 +14,9 @@ spec:
             # Volume name (used as reference below)
           name: config
       containers:
+        - resources:
+            limits:
+              memory: '250Mi'
         - env:
             - name: VERTX_CONFIG_PATH
               value: '/deployments/conf/config.yml'
